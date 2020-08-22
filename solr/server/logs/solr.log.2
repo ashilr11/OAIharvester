@@ -1,0 +1,54 @@
+2020-07-24 20:13:43.622 INFO  (main) [   ] o.e.j.u.log Logging initialized @848ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-07-24 20:13:43.677 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2020-07-24 20:13:43.765 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.7+10-post-Ubuntu-2ubuntu218.04
+2020-07-24 20:13:43.781 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/solr-8.6.0/server/contexts/] at interval 0
+2020-07-24 20:13:44.017 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-07-24 20:13:44.025 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-07-24 20:13:44.025 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-07-24 20:13:44.026 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2020-07-24 20:13:44.070 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-07-24 20:13:44.074 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
+2020-07-24 20:13:44.074 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2020-07-24 20:13:44.074 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/solr-8.6.0
+2020-07-24 20:13:44.074 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-07-24T20:13:44.074660Z
+2020-07-24 20:13:44.098 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/ashil/solr-8.6.0/server/solr
+2020-07-24 20:13:44.102 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/ashil/solr-8.6.0/server/solr/solr.xml
+2020-07-24 20:13:44.171 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818, but no JMX reporters were configured - adding default JMX reporter.
+2020-07-24 20:13:44.657 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2020-07-24 20:13:44.793 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@598260a6[provider=null,keyStore=null,trustStore=null]
+2020-07-24 20:13:44.793 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@598260a6[provider=null,keyStore=null,trustStore=null]
+2020-07-24 20:13:44.950 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@2c58dcb1[provider=null,keyStore=null,trustStore=null]
+2020-07-24 20:13:44.950 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@2c58dcb1[provider=null,keyStore=null,trustStore=null]
+2020-07-24 20:13:45.011 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2020-07-24 20:13:45.181 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2020-07-24 20:13:45.183 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2020-07-24 20:13:45.248 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-24 20:13:45.249 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-24 20:13:45.254 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-24 20:13:45.285 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /home/ashil/solr-8.6.0/server/solr
+2020-07-24 20:13:45.327 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4bff1903{/solr,file:///home/ashil/solr-8.6.0/server/solr-webapp/webapp/,AVAILABLE}{/home/ashil/solr-8.6.0/server/solr-webapp/webapp}
+2020-07-24 20:13:45.337 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1b73be9f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-07-24 20:13:45.337 INFO  (main) [   ] o.e.j.s.Server Started @2565ms
+2020-07-24 20:13:51.401 INFO  (qtp638169719-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1595621631241} status=0 QTime=30
+2020-07-24 20:13:51.478 INFO  (qtp638169719-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595621631243} status=0 QTime=106
+2020-07-24 20:13:51.478 INFO  (qtp638169719-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595621631243} status=0 QTime=106
+2020-07-24 20:13:58.648 INFO  (qtp638169719-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1595621631241} status=0 QTime=0
+2020-07-24 20:13:58.651 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1595621638638&since=0} status=0 QTime=1
+2020-07-24 20:13:58.652 INFO  (qtp638169719-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595621631243} status=0 QTime=3
+2020-07-24 20:13:59.891 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1595621631241} status=0 QTime=0
+2020-07-24 20:13:59.895 INFO  (qtp638169719-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595621631243} status=0 QTime=3
+2020-07-24 20:13:59.900 INFO  (qtp638169719-39) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595621631243} status=0 QTime=2
+2020-07-24 20:14:18.069 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@1b73be9f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-07-24 20:14:18.069 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2020-07-24 20:14:18.072 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1015659282
+2020-07-24 20:14:18.075 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2020-07-24 20:14:18.075 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@3ba46e63: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@5aa91f01
+2020-07-24 20:14:18.084 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2020-07-24 20:14:18.084 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@489091bd: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@399cb352
+2020-07-24 20:14:18.085 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2020-07-24 20:14:18.085 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@512d6e60: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@28580fb6
+2020-07-24 20:14:18.096 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@4bff1903{/solr,null,UNAVAILABLE}{/home/ashil/solr-8.6.0/server/solr-webapp/webapp}

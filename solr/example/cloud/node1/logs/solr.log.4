@@ -1,0 +1,191 @@
+2020-07-27 13:59:14.588 INFO  (main) [   ] o.e.j.u.log Logging initialized @887ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-07-27 13:59:14.644 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2020-07-27 13:59:14.737 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.7+10-post-Ubuntu-2ubuntu218.04
+2020-07-27 13:59:14.755 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/HERIPORT/solr/server/contexts/] at interval 0
+2020-07-27 13:59:14.990 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-07-27 13:59:15.000 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-07-27 13:59:15.000 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-07-27 13:59:15.002 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2020-07-27 13:59:15.048 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-07-27 13:59:15.051 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
+2020-07-27 13:59:15.052 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in cloud mode on port 8983
+2020-07-27 13:59:15.052 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/HERIPORT/solr
+2020-07-27 13:59:15.052 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-07-27T13:59:15.052246Z
+2020-07-27 13:59:15.078 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/ashil/HERIPORT/solr/example/cloud/node1/solr
+2020-07-27 13:59:15.082 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/ashil/HERIPORT/solr/example/cloud/node1/solr/solr.xml
+2020-07-27 13:59:15.150 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818, but no JMX reporters were configured - adding default JMX reporter.
+2020-07-27 13:59:15.674 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2020-07-27 13:59:15.786 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@44841b43[provider=null,keyStore=null,trustStore=null]
+2020-07-27 13:59:15.786 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@44841b43[provider=null,keyStore=null,trustStore=null]
+2020-07-27 13:59:15.936 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@28c86134[provider=null,keyStore=null,trustStore=null]
+2020-07-27 13:59:15.936 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@28c86134[provider=null,keyStore=null,trustStore=null]
+2020-07-27 13:59:15.977 INFO  (main) [   ] o.a.s.c.SolrZkServerProps Reading configuration from: /home/ashil/HERIPORT/solr/example/cloud/node1/solr/zoo.cfg
+2020-07-27 13:59:15.979 INFO  (main) [   ] o.a.s.c.SolrZkServer STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 9983
+2020-07-27 13:59:15.979 WARN  (main) [   ] o.a.s.c.SolrZkServer Embedded Zookeeper is not recommended in production environments. See Reference Guide for details.
+2020-07-27 13:59:16.479 INFO  (main) [   ] o.a.s.c.ZkContainer Zookeeper client=localhost:9983
+2020-07-27 13:59:16.538 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Waiting for client to connect to ZooKeeper
+2020-07-27 13:59:16.559 INFO  (zkConnectionManagerCallback-11-thread-1) [   ] o.a.s.c.c.ConnectionManager zkClient has connected
+2020-07-27 13:59:16.559 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Client is connected to ZooKeeper
+2020-07-27 13:59:16.610 INFO  (main) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (0) -> (1)
+2020-07-27 13:59:32.752 INFO  (zkCallback-10-thread-2) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (1) -> (0)
+2020-07-27 13:59:32.761 INFO  (main) [   ] o.a.s.c.OverseerElectionContext I am going to be the leader 192.168.100.5:8983_solr
+2020-07-27 13:59:32.767 INFO  (main) [   ] o.a.s.c.Overseer Overseer (id=72058115403284480-192.168.100.5:8983_solr-n_0000000003) starting
+2020-07-27 13:59:32.830 INFO  (main) [   ] o.a.s.c.ZkController Register node as live in ZooKeeper:/live_nodes/192.168.100.5:8983_solr
+2020-07-27 13:59:32.833 INFO  (OverseerStateUpdate-72058115403284480-192.168.100.5:8983_solr-n_0000000003) [   ] o.a.s.c.Overseer Starting to work on the main queue : 192.168.100.5:8983_solr
+2020-07-27 13:59:32.841 INFO  (zkCallback-10-thread-2) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (0) -> (1)
+2020-07-27 13:59:32.873 INFO  (main) [   ] o.a.s.p.PackageLoader /packages.json updated to version -1
+2020-07-27 13:59:32.888 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2020-07-27 13:59:32.984 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2020-07-27 13:59:33.080 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-27 13:59:33.080 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-27 13:59:33.085 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-27 13:59:33.119 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/ashil/HERIPORT/solr/example/cloud/node1/solr
+2020-07-27 13:59:33.120 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [Test_shard1_replica_n1]
+2020-07-27 13:59:33.128 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2020-07-27 13:59:33.194 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.0
+2020-07-27 13:59:33.212 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4bff1903{/solr,file:///home/ashil/HERIPORT/solr/server/solr-webapp/webapp/,AVAILABLE}{/home/ashil/HERIPORT/solr/server/solr-webapp/webapp}
+2020-07-27 13:59:33.222 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1b73be9f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-07-27 13:59:33.223 INFO  (main) [   ] o.e.j.s.Server Started @19523ms
+2020-07-27 13:59:33.396 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.s.IndexSchema Schema name=default-config
+2020-07-27 13:59:33.958 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-07-27 13:59:34.078 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.0
+2020-07-27 13:59:34.130 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.IndexSchema Schema name=default-config
+2020-07-27 13:59:34.302 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-07-27 13:59:34.368 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.CoreContainer Creating SolrCore 'Test_shard1_replica_n1' using configuration from configset Test, trusted=true
+2020-07-27 13:59:34.389 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.Test.shard1.replica_n1' (registry 'solr.core.Test.shard1.replica_n1') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-27 13:59:34.396 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SolrCore [[Test_shard1_replica_n1] ] Opening new SolrCore at [/home/ashil/HERIPORT/solr/example/cloud/node1/solr/Test_shard1_replica_n1], dataDir=[/home/ashil/HERIPORT/solr/example/cloud/node1/solr/Test_shard1_replica_n1/data/]
+2020-07-27 13:59:34.920 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2020-07-27 13:59:34.920 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2020-07-27 13:59:34.943 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2020-07-27 13:59:34.944 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2020-07-27 13:59:34.959 INFO  (qtp638169719-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=13
+2020-07-27 13:59:35.004 INFO  (qtp638169719-17) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json and sendToOCPQueue=true
+2020-07-27 13:59:35.010 INFO  (qtp638169719-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json} status=0 QTime=6
+2020-07-27 13:59:35.147 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.r.ManagedResourceStorage Configured ZooKeeperStorageIO with znodeBase: /configs/Test
+2020-07-27 13:59:35.163 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.r.ManagedResourceStorage Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/Test
+2020-07-27 13:59:35.165 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.ZkIndexSchemaReader Creating ZooKeeper watch for the managed schema at /configs/Test/managed-schema
+2020-07-27 13:59:35.167 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.ZkIndexSchemaReader Current schema version 4 is already the latest
+2020-07-27 13:59:35.183 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2020-07-27 13:59:35.192 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2020-07-27 13:59:35.203 INFO  (coreLoadExecutor-23-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2020-07-27 13:59:35.222 INFO  (searcherExecutor-25-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-07-27 13:59:35.223 INFO  (searcherExecutor-25-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2020-07-27 13:59:35.234 INFO  (searcherExecutor-25-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SolrCore [Test_shard1_replica_n1]  Registered new searcher autowarm time: 0 ms
+2020-07-27 13:59:35.245 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ShardLeaderElectionContextBase make sure parent is created /collections/Test/leaders/shard1
+2020-07-27 13:59:35.253 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ShardLeaderElectionContext Enough replicas found to continue.
+2020-07-27 13:59:35.253 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ShardLeaderElectionContext I may be the new leader - try and sync
+2020-07-27 13:59:35.254 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SyncStrategy Sync replicas to http://192.168.100.5:8983/solr/Test_shard1_replica_n1/
+2020-07-27 13:59:35.255 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SyncStrategy Sync Success - now sync replicas to me
+2020-07-27 13:59:35.256 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SyncStrategy http://192.168.100.5:8983/solr/Test_shard1_replica_n1/ has no replicas
+2020-07-27 13:59:35.257 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ShardLeaderElectionContextBase Creating leader registration node /collections/Test/leaders/shard1/leader after winning as /collections/Test/leader_elect/shard1/election/72058115403284480-core_node2-n_0000000003
+2020-07-27 13:59:35.262 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ShardLeaderElectionContext I am the new leader: http://192.168.100.5:8983/solr/Test_shard1_replica_n1/ shard1
+2020-07-27 13:59:35.267 INFO  (coreZkRegister-1-thread-1-processing-n:192.168.100.5:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ZkController I am the leader, no recovery necessary
+2020-07-27 13:59:35.280 INFO  (zkCallback-10-thread-1) [   ] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/Test/state.json] for collection [Test] has occurred - updating... (live nodes size: [1])
+2020-07-27 13:59:35.280 INFO  (zkCallback-10-thread-2) [   ] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/Test/state.json] for collection [Test] has occurred - updating... (live nodes size: [1])
+2020-07-27 13:59:35.280 INFO  (zkCallback-10-thread-3) [   ] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/Test/state.json] for collection [Test] has occurred - updating... (live nodes size: [1])
+2020-07-27 13:59:35.280 INFO  (zkCallback-10-thread-4) [   ] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/Test/state.json] for collection [Test] has occurred - updating... (live nodes size: [1])
+2020-07-27 13:59:38.199 INFO  (qtp638169719-18) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=list&wt=json and sendToOCPQueue=true
+2020-07-27 13:59:38.200 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=list&wt=json} status=0 QTime=2
+2020-07-27 13:59:43.032 INFO  (qtp638169719-19) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.ZkController Persisted config data to node /configs/Test/configoverlay.json 
+2020-07-27 13:59:43.036 INFO  (Thread-15) [   ] o.a.s.c.SolrCore config update listener called for core Test_shard1_replica_n1
+2020-07-27 13:59:43.037 INFO  (qtp638169719-19) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Waiting up to 30 secs for 1 replicas to set the property overlay to be of version 1 for collection Test
+2020-07-27 13:59:43.037 INFO  (Thread-15) [   ] o.a.s.c.SolrCore core reload Test_shard1_replica_n1
+2020-07-27 13:59:43.042 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Time elapsed : 0 secs, maxWait 30
+2020-07-27 13:59:43.054 INFO  (Thread-15) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.0
+2020-07-27 13:59:43.101 INFO  (Thread-15) [   ] o.a.s.s.IndexSchema Schema name=default-config
+2020-07-27 13:59:43.187 INFO  (qtp638169719-20) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler expecting overlay version 1 but my version is 0
+2020-07-27 13:59:43.188 INFO  (SolrConfigHandler-refreshconf) [   ] o.a.s.h.SolrConfigHandler Another reload is in progress . Not doing anything
+2020-07-27 13:59:43.188 INFO  (qtp638169719-20) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.S.Request [Test_shard1_replica_n1]  webapp=/solr path=/config/znodeVersion params={overlay=1&wt=javabin&version=2} status=0 QTime=1
+2020-07-27 13:59:43.198 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Could not get expectedVersion 1 from http://192.168.100.5:8983/solr/Test_shard1_replica_n1/ for prop overlay   after 1 attempts
+2020-07-27 13:59:43.198 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Time elapsed : 0 secs, maxWait 30
+2020-07-27 13:59:43.274 INFO  (Thread-15) [   ] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-07-27 13:59:43.302 INFO  (qtp638169719-17) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler expecting overlay version 1 but my version is 0
+2020-07-27 13:59:43.302 INFO  (SolrConfigHandler-refreshconf) [   ] o.a.s.h.SolrConfigHandler Another reload is in progress . Not doing anything
+2020-07-27 13:59:43.302 INFO  (qtp638169719-17) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.S.Request [Test_shard1_replica_n1]  webapp=/solr path=/config/znodeVersion params={overlay=1&wt=javabin&version=2} status=0 QTime=0
+2020-07-27 13:59:43.304 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Could not get expectedVersion 1 from http://192.168.100.5:8983/solr/Test_shard1_replica_n1/ for prop overlay   after 2 attempts
+2020-07-27 13:59:43.304 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Time elapsed : 0 secs, maxWait 30
+2020-07-27 13:59:43.334 INFO  (Thread-15) [   ] o.a.s.c.CoreContainer Reloading SolrCore 'Test_shard1_replica_n1' using configuration from configset Test
+2020-07-27 13:59:43.369 INFO  (Thread-15) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.Test.shard1.replica_n1' (registry 'solr.core.Test.shard1.replica_n1') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-27 13:59:43.369 INFO  (Thread-15) [   ] o.a.s.c.SolrCore [[Test_shard1_replica_n1] ] Opening new SolrCore at [/home/ashil/HERIPORT/solr/example/cloud/node1/solr/Test_shard1_replica_n1], dataDir=[/home/ashil/HERIPORT/solr/example/cloud/node1/solr/Test_shard1_replica_n1/data/]
+2020-07-27 13:59:43.407 INFO  (qtp638169719-18) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler expecting overlay version 1 but my version is 0
+2020-07-27 13:59:43.407 INFO  (SolrConfigHandler-refreshconf) [   ] o.a.s.h.SolrConfigHandler Another reload is in progress . Not doing anything
+2020-07-27 13:59:43.407 INFO  (qtp638169719-18) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.S.Request [Test_shard1_replica_n1]  webapp=/solr path=/config/znodeVersion params={overlay=1&wt=javabin&version=2} status=0 QTime=0
+2020-07-27 13:59:43.409 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Could not get expectedVersion 1 from http://192.168.100.5:8983/solr/Test_shard1_replica_n1/ for prop overlay   after 3 attempts
+2020-07-27 13:59:43.409 INFO  (solrHandlerExecutor-30-thread-1-processing-n:192.168.100.5:8983_solr x:Test_shard1_replica_n1 c:Test s:shard1 r:core_node2) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Time elapsed : 0 secs, maxWait 30
+2020-07-27 13:59:43.446 INFO  (Thread-15) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2020-07-27 13:59:43.446 INFO  (Thread-15) [   ] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2020-07-27 13:59:43.453 INFO  (Thread-15) [   ] o.a.s.r.ManagedResourceStorage Configured ZooKeeperStorageIO with znodeBase: /configs/Test
+2020-07-27 13:59:43.453 INFO  (Thread-15) [   ] o.a.s.r.ManagedResourceStorage Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/Test
+2020-07-27 13:59:43.453 INFO  (Thread-15) [   ] o.a.s.s.ZkIndexSchemaReader Creating ZooKeeper watch for the managed schema at /configs/Test/managed-schema
+2020-07-27 13:59:43.454 INFO  (Thread-15) [   ] o.a.s.s.ZkIndexSchemaReader Current schema version 4 is already the latest
+2020-07-27 13:59:43.454 INFO  (Thread-15) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2020-07-27 13:59:43.454 INFO  (Thread-15) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2020-07-27 13:59:43.456 INFO  (Thread-15) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2020-07-27 13:59:43.462 INFO  (searcherExecutor-34-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-07-27 13:59:43.462 INFO  (searcherExecutor-34-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2020-07-27 13:59:43.470 INFO  (searcherExecutor-34-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.c.SolrCore [Test_shard1_replica_n1]  Registered new searcher autowarm time: 0 ms
+2020-07-27 13:59:43.478 INFO  (Thread-15) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2020-07-27 13:59:43.488 INFO  (searcherExecutor-34-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2020-07-27 13:59:43.493 INFO  (searcherExecutor-34-thread-1-processing-n:192.168.100.5:8983_solr) [   ] o.a.s.c.SolrCore [Test_shard1_replica_n1]  Registered new searcher autowarm time: 1 ms
+2020-07-27 13:59:43.513 INFO  (qtp638169719-17) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler I already have the expected version 1 of config
+2020-07-27 13:59:43.513 INFO  (qtp638169719-17) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler isStale false , resourceloader org.apache.solr.cloud.ZkSolrResourceLoader
+2020-07-27 13:59:43.513 INFO  (qtp638169719-17) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.S.Request [Test_shard1_replica_n1]  webapp=/solr path=/config/znodeVersion params={overlay=1&wt=javabin&version=2} status=0 QTime=0
+2020-07-27 13:59:43.516 INFO  (qtp638169719-19) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.h.SolrConfigHandler Took 481.0ms to set the property overlay to be of version 1 for collection Test
+2020-07-27 13:59:43.516 INFO  (qtp638169719-19) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.S.Request [Test_shard1_replica_n1]  webapp=/solr path=/config params={wt=javabin&version=2} status=0 QTime=569
+2020-07-27 13:59:43.516 INFO  (qtp638169719-19) [   ] o.a.s.c.SolrCore [Test_shard1_replica_n1]  CLOSING SolrCore org.apache.solr.core.SolrCore@1868dfdc
+2020-07-27 13:59:43.516 INFO  (qtp638169719-19) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.Test.shard1.replica_n1 tag=SolrCore@1868dfdc
+2020-07-27 13:59:43.517 INFO  (qtp638169719-19) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@1d0beac5: rootName = null, domain = solr.core.Test.shard1.replica_n1, service url = null, agent id = null] for registry solr.core.Test.shard1.replica_n1/com.codahale.metrics.MetricRegistry@3948a99d
+2020-07-27 13:59:43.521 INFO  (qtp638169719-19) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.collection.Test.shard1.leader tag=SolrCore@1868dfdc
+2020-07-27 14:00:06.755 INFO  (qtp638169719-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1595858406589} status=0 QTime=1
+2020-07-27 14:00:06.760 INFO  (qtp638169719-105) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595858406591} status=0 QTime=3
+2020-07-27 14:00:06.771 INFO  (qtp638169719-25) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.S.Request [Test_shard1_replica_n1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1595858406726} status=0 QTime=14
+2020-07-27 14:00:06.789 INFO  (qtp638169719-18) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1595858406590 and sendToOCPQueue=true
+2020-07-27 14:00:06.789 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1595858406590} status=0 QTime=0
+2020-07-27 14:00:06.796 INFO  (qtp638169719-21) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1595858406590 and sendToOCPQueue=true
+2020-07-27 14:00:06.798 INFO  (qtp638169719-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1595858406590} status=0 QTime=1
+2020-07-28 18:54:07.934 INFO  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider Error on getting remote info, trying again: Server refused connection at: http://192.168.100.5:8983/solr
+2020-07-28 18:54:08.437 INFO  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider Error on getting remote info, trying again: Server refused connection at: http://192.168.100.5:8983/solr
+2020-07-28 18:54:08.939 INFO  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider Error on getting remote info, trying again: Server refused connection at: http://192.168.100.5:8983/solr
+2020-07-28 18:54:09.440 WARN  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider could not get tags from node 192.168.100.5:8983_solr => java.lang.NullPointerException
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.lambda$fetchReplicaMetrics$7(SolrClientNodeStateProvider.java:230)
+java.lang.NullPointerException: null
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.lambda$fetchReplicaMetrics$7(SolrClientNodeStateProvider.java:230) ~[?:?]
+	at java.util.HashMap.forEach(HashMap.java:1336) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.fetchReplicaMetrics(SolrClientNodeStateProvider.java:229) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.fetchReplicaMetrics(SolrClientNodeStateProvider.java:188) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.getReplicaInfo(SolrClientNodeStateProvider.java:171) ~[?:?]
+	at org.apache.solr.handler.admin.MetricsHistoryHandler.collectGlobalMetrics(MetricsHistoryHandler.java:491) ~[?:?]
+	at org.apache.solr.handler.admin.MetricsHistoryHandler.collectMetrics(MetricsHistoryHandler.java:379) ~[?:?]
+	at org.apache.solr.handler.admin.MetricsHistoryHandler.lambda$new$0(MetricsHistoryHandler.java:236) ~[?:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2020-07-28 18:54:09.442 INFO  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider Error on getting remote info, trying again: Server refused connection at: http://192.168.100.5:8983/solr
+2020-07-28 18:54:09.944 INFO  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider Error on getting remote info, trying again: Server refused connection at: http://192.168.100.5:8983/solr
+2020-07-28 18:54:10.446 INFO  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider Error on getting remote info, trying again: Server refused connection at: http://192.168.100.5:8983/solr
+2020-07-28 18:54:10.947 WARN  (MetricsHistoryHandler-22-thread-1) [   ] o.a.s.c.s.i.SolrClientNodeStateProvider could not get tags from node 192.168.100.5:8983_solr => java.lang.NullPointerException
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.lambda$fetchReplicaMetrics$7(SolrClientNodeStateProvider.java:230)
+java.lang.NullPointerException: null
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.lambda$fetchReplicaMetrics$7(SolrClientNodeStateProvider.java:230) ~[?:?]
+	at java.util.HashMap.forEach(HashMap.java:1336) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.fetchReplicaMetrics(SolrClientNodeStateProvider.java:229) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider$AutoScalingSnitch.getRemoteInfo(SolrClientNodeStateProvider.java:276) ~[?:?]
+	at org.apache.solr.common.cloud.rule.ImplicitSnitch.getTags(ImplicitSnitch.java:76) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.fetchTagValues(SolrClientNodeStateProvider.java:140) ~[?:?]
+	at org.apache.solr.client.solrj.impl.SolrClientNodeStateProvider.getNodeValues(SolrClientNodeStateProvider.java:129) ~[?:?]
+	at org.apache.solr.handler.admin.MetricsHistoryHandler.collectGlobalMetrics(MetricsHistoryHandler.java:508) ~[?:?]
+	at org.apache.solr.handler.admin.MetricsHistoryHandler.collectMetrics(MetricsHistoryHandler.java:379) ~[?:?]
+	at org.apache.solr.handler.admin.MetricsHistoryHandler.lambda$new$0(MetricsHistoryHandler.java:236) ~[?:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[?:?]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
