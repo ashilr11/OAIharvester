@@ -23,11 +23,11 @@
             <!-- sets id of doc as identifier-->
             <xsl:element name="field">
                 <xsl:attribute name="name">id</xsl:attribute>
-                <xsl:value-of select="../../ns1:header/ns1:identifier" xmlns:ns1="http://www.openarchives.org/OAI/2.0/"/>
+                <xsl:value-of select="../../header/identifier"/>
             </xsl:element>
 
             <!--date field-->
-            <field name="last_modified">NOW</field>
+            <!--<field name="last_modified">NOW</field>-->
 
             <!--grab all elements and send to templates-->
             <xsl:for-each select="dc:title">
@@ -83,92 +83,92 @@
     <!--Element Templates-->
     <xsl:template name="title">
         <xsl:element name="field">
-            <xsl:attribute name="name">title</xsl:attribute>
+            <xsl:attribute name="name">dc_title</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="creator">
         <!-- <xsl:variable name="dc_creator"><xsl:value-of select="normalize-space(.)"/></xsl:variable>         -->
         <xsl:element name="field">
-            <xsl:attribute name="name">creator</xsl:attribute>
+            <xsl:attribute name="name">dc_creator</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="description">
         <xsl:element name="field">
-            <xsl:attribute name="name">description</xsl:attribute>
+            <xsl:attribute name="name">dc_description</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="type">
         <xsl:element name="field">
-            <xsl:attribute name="name">type</xsl:attribute>
+            <xsl:attribute name="name">dc_type</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="format">
         <xsl:element name="field">
-            <xsl:attribute name="name">format</xsl:attribute>
+            <xsl:attribute name="name">dc_format</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="publisher">
         <xsl:element name="field">
-            <xsl:attribute name="name">publisher</xsl:attribute>
+            <xsl:attribute name="name">dc_publisher</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="contributor">
         <xsl:element name="field">
-            <xsl:attribute name="name">contributor</xsl:attribute>
+            <xsl:attribute name="name">dc_contributors</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="source">
         <xsl:element name="field">
-            <xsl:attribute name="name">source</xsl:attribute>
+            <xsl:attribute name="name">dc_source</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="relation">
         <xsl:element name="field">
-            <xsl:attribute name="name">relation</xsl:attribute>
+            <xsl:attribute name="name">dc_relation</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="coverage">
         <xsl:element name="field">
-            <xsl:attribute name="name">coverage</xsl:attribute>
+            <xsl:attribute name="name">dc_coverage</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="rights">
         <xsl:element name="field">
-            <xsl:attribute name="name">rights</xsl:attribute>
+            <xsl:attribute name="name">dc_rights</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="subject">
         <xsl:element name="field">
-            <xsl:attribute name="name">subject</xsl:attribute>
+            <xsl:attribute name="name">dc_subject</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="date">
         <xsl:element name="field">
-            <xsl:attribute name="name">dc_date</xsl:attribute>
+            <xsl:attribute name="name">dc_modDate</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="identifier">
         <xsl:element name="field">
-            <xsl:attribute name="name">id</xsl:attribute>
+            <xsl:attribute name="name">dc_identifier</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>
     <xsl:template name="language">
         <xsl:element name="field">
-            <xsl:attribute name="name">language</xsl:attribute>
+            <xsl:attribute name="name">dc_language</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>

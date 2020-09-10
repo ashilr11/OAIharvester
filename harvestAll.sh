@@ -3,7 +3,7 @@
 # Run as a Cron job
 
 # Harvest files from ** in the file named dc.xml
-python2 harvest.py -l https://www.hindawi.com/oai-pmh/oai.aspx -o dcXML/dc.xml -f 2020-07-30
+python2 listRecords.py -l https://www.hindawi.com/oai-pmh/oai.aspx -o dcXML/dc.xml -f 2020-07-30
 echo Metadata retrieved.
 
 # Run dc2solr.py to perform the conversion
