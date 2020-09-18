@@ -1,0 +1,41 @@
+2020-07-26 18:38:45.164 INFO  (main) [   ] o.e.j.u.log Logging initialized @1316ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-07-26 18:38:45.264 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2020-07-26 18:38:45.411 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.7+10-post-Ubuntu-2ubuntu218.04
+2020-07-26 18:38:45.437 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/solr-8.6.0/server/contexts/] at interval 0
+2020-07-26 18:38:45.802 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-07-26 18:38:45.814 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-07-26 18:38:45.814 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-07-26 18:38:45.816 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2020-07-26 18:38:45.888 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-07-26 18:38:45.893 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
+2020-07-26 18:38:45.893 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2020-07-26 18:38:45.893 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/solr-8.6.0
+2020-07-26 18:38:45.894 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-07-26T18:38:45.894007Z
+2020-07-26 18:38:45.935 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/ashil/solr-8.6.0/server/solr
+2020-07-26 18:38:45.941 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/ashil/solr-8.6.0/server/solr/solr.xml
+2020-07-26 18:38:46.066 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818, but no JMX reporters were configured - adding default JMX reporter.
+2020-07-26 18:38:46.885 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2020-07-26 18:38:47.108 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@598260a6[provider=null,keyStore=null,trustStore=null]
+2020-07-26 18:38:47.108 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@598260a6[provider=null,keyStore=null,trustStore=null]
+2020-07-26 18:38:47.333 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@2c58dcb1[provider=null,keyStore=null,trustStore=null]
+2020-07-26 18:38:47.333 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@2c58dcb1[provider=null,keyStore=null,trustStore=null]
+2020-07-26 18:38:47.412 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2020-07-26 18:38:47.664 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2020-07-26 18:38:47.666 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2020-07-26 18:38:47.768 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-26 18:38:47.769 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-26 18:38:47.776 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-07-26 18:38:47.821 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /home/ashil/solr-8.6.0/server/solr
+2020-07-26 18:38:47.900 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4bff1903{/solr,file:///home/ashil/solr-8.6.0/server/solr-webapp/webapp/,AVAILABLE}{/home/ashil/solr-8.6.0/server/solr-webapp/webapp}
+2020-07-26 18:38:47.922 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1b73be9f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-07-26 18:38:47.923 INFO  (main) [   ] o.e.j.s.Server Started @4077ms
+2020-07-26 18:38:52.820 INFO  (qtp638169719-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1595788732387} status=0 QTime=47
+2020-07-26 18:38:52.835 INFO  (qtp638169719-40) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595788732388} status=0 QTime=63
+2020-07-26 18:38:52.835 INFO  (qtp638169719-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595788732388} status=0 QTime=63
+2020-07-26 18:44:28.275 INFO  (qtp638169719-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1595789068139} status=0 QTime=1
+2020-07-26 18:44:28.283 INFO  (qtp638169719-45) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595789068139} status=0 QTime=6
+2020-07-26 18:44:28.285 INFO  (qtp638169719-39) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1595789068139} status=0 QTime=8

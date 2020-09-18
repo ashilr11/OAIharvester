@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     parser.add_option("-l", "--link", dest="link", help="URL of repository")
     parser.add_option("-o", "--filename", dest="filename", help="write repository to file")
-    parser.add_option("-f", "--from", dest="fromDate", help="harvest records from this date yyyy-mm-dd")
+    parser.add_option("-i", "--identifier", dest="identifier", help="specify identifier for list metadata format request")
 
     (options, args) = parser.parse_args()
 
@@ -65,13 +65,13 @@ if __name__ == "__main__":
         parser.error("a repository url and output file are required")
 
     if options:
-        serverString = verbOpts = fromDate = ''
+        serverString = verbOpts = identifier = ''
         if options.link:
             serverString = options.link
         if options.filename:
             outFileName = options.filename
-        if options.fromDate:
-            fromDate = options.fromDate
+        if options.identifier:
+            identifier = options.identifier
 
     else:
         print usage
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     if not serverString.startswith('http'):
         serverString = 'http://' + serverString
 
-    print "Writing records to %s from archive %s" % (outFileName, serverString)
+    print "Writing metadata formats to %s from archive %s" % (outFileName, serverString)
 
     ofile = codecs.lookup('utf-8')[-1](file(outFileName, 'wb'))
 
@@ -87,16 +87,8 @@ if __name__ == "__main__":
      xmlns:dc="http://purl.org/dc/elements/1.1/" \
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\n')  # wrap list of records with this
 
-    if oaiSet:
-        verbOpts += '&set=%s' % oaiSet
-    if fromDate:
-        verbOpts += '&from=%s' % fromDate
-    if untilDate:
-        verbOpts += '&until=%s' % untilDate
-    if mdPrefix:
-        verbOpts += '&metadataPrefix=%s' % mdPrefix
-    else:
-        verbOpts += '&metadataPrefix=%s' % 'oai_dc'
+    if identifier:
+        verbOpts += '&identifier=%s' % identifier
 
     print "Using url:%s" % serverString + '?ListMetadataFormats' + verbOpts
 
@@ -104,13 +96,12 @@ if __name__ == "__main__":
 
     recordCount = 0
 
-    while data:
-        events = xml.dom.pulldom.parseString(data)
-        for (event, node) in events:
-            if event == "START_ELEMENT" and node.tagName == 'record':
-                events.expandNode(node)
-                node.writexml(ofile)
-                recordCount += 1
+    events = xml.dom.pulldom.parseString(data)
+    for (event, node) in events:
+        if event == "START_ELEMENT" and node.tagName == 'metadataFormat':
+            events.expandNode(node)
+            node.writexml(ofile)
+            recordCount += 1
 
     ofile.write('\n</repository>\n'), ofile.close()
 

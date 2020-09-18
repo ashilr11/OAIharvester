@@ -1,20 +1,20 @@
 OpenJDK 64-Bit Server VM warning: Failed to reserve shared memory. (error = 1)
 OpenJDK 64-Bit Server VM warning: Failed to reserve shared memory. (error = 12)
 OpenJDK 64-Bit Server VM warning: Failed to reserve shared memory. (error = 12)
-2020-07-26 18:38:45.164 INFO  (main) [   ] o.e.j.u.log Logging initialized @1316ms to org.eclipse.jetty.util.log.Slf4jLog
-2020-07-26 18:38:45.264 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+2020-09-12 18:25:26.480 INFO  (main) [   ] o.e.j.u.log Logging initialized @813ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-09-12 18:25:26.719 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
     <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
         <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
       </Arg></New>
   </Arg>
-2020-07-26 18:38:45.411 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.7+10-post-Ubuntu-2ubuntu218.04
-2020-07-26 18:38:45.437 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/solr-8.6.0/server/contexts/] at interval 0
-2020-07-26 18:38:45.802 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
-2020-07-26 18:38:45.814 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
-2020-07-26 18:38:45.814 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
-2020-07-26 18:38:45.816 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
-2020-07-26 18:38:45.888 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2020-07-26 18:38:45.893 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
-2020-07-26 18:38:45.893 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2020-07-26 18:38:45.893 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/solr-8.6.0
-2020-07-26 18:38:45.894 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-07-26T18:38:45.894007Z
+2020-09-12 18:25:26.824 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.8+10-post-Ubuntu-0ubuntu118.04.1
+2020-09-12 18:25:26.842 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/HERIPORT/harvester/solr/server/contexts/] at interval 0
+2020-09-12 18:25:27.073 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-09-12 18:25:27.082 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-09-12 18:25:27.082 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-09-12 18:25:27.085 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2020-09-12 18:25:27.134 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-09-12 18:25:27.138 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
+2020-09-12 18:25:27.138 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2020-09-12 18:25:27.138 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/HERIPORT/harvester/solr
+2020-09-12 18:25:27.139 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-09-12T18:25:27.139123Z

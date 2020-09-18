@@ -1,0 +1,155 @@
+2020-09-12 18:27:11.191 INFO  (main) [   ] o.e.j.u.log Logging initialized @775ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-09-12 18:27:11.248 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2020-09-12 18:27:11.334 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.8+10-post-Ubuntu-0ubuntu118.04.1
+2020-09-12 18:27:11.351 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/HERIPORT/harvester/solr/server/contexts/] at interval 0
+2020-09-12 18:27:11.574 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-09-12 18:27:11.582 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-09-12 18:27:11.582 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-09-12 18:27:11.584 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2020-09-12 18:27:11.631 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-09-12 18:27:11.635 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
+2020-09-12 18:27:11.635 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in cloud mode on port 1
+2020-09-12 18:27:11.636 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/HERIPORT/harvester/solr
+2020-09-12 18:27:11.636 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-09-12T18:27:11.636174Z
+2020-09-12 18:27:11.664 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr
+2020-09-12 18:27:11.669 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/solr.xml
+2020-09-12 18:27:11.745 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@606e4010, but no JMX reporters were configured - adding default JMX reporter.
+2020-09-12 18:27:12.226 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2020-09-12 18:27:12.343 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@4df39a88[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:27:12.343 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@4df39a88[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:27:12.475 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@5580d62f[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:27:12.475 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@5580d62f[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:27:12.573 INFO  (main) [   ] o.a.s.c.SolrZkServerProps Reading configuration from: /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/zoo.cfg
+2020-09-12 18:27:12.575 INFO  (main) [   ] o.a.s.c.SolrZkServer STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 1001
+2020-09-12 18:27:12.575 WARN  (main) [   ] o.a.s.c.SolrZkServer Embedded Zookeeper is not recommended in production environments. See Reference Guide for details.
+2020-09-12 18:27:12.616 ERROR (Thread-11) [   ] o.a.s.c.SolrZkServer ZooKeeper Server ERROR => java.net.SocketException: Permission denied
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:455) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:447) ~[?:?]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227) ~[?:?]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80) ~[?:?]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:73) ~[?:?]
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.configure(NIOServerCnxnFactory.java:687) ~[?:?]
+	at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:143) ~[?:?]
+	at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:121) ~[?:?]
+2020-09-12 18:27:12.617 ERROR (Thread-11) [   ] o.a.z.s.NIOServerCnxnFactory Thread Thread[Thread-11,5,main] died => org.apache.solr.common.SolrException: java.net.SocketException: Permission denied
+	at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:126)
+org.apache.solr.common.SolrException: java.net.SocketException: Permission denied
+	at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:126) ~[?:?]
+Caused by: java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:455) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:447) ~[?:?]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227) ~[?:?]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80) ~[?:?]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:73) ~[?:?]
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.configure(NIOServerCnxnFactory.java:687) ~[?:?]
+	at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:143) ~[?:?]
+	at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:121) ~[?:?]
+2020-09-12 18:27:13.076 INFO  (main) [   ] o.a.s.c.ZkContainer Zookeeper client=localhost:1001
+2020-09-12 18:27:13.120 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Waiting for client to connect to ZooKeeper
+2020-09-12 18:27:44.053 ERROR (main) [   ] o.a.s.s.SolrDispatchFilter Could not start Solr. Check solr/home property and the logs
+2020-09-12 18:27:44.053 ERROR (main-EventThread) [   ] o.a.z.ClientCnxn Error while calling watcher  => java.util.concurrent.RejectedExecutionException: Task org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor$$Lambda$187/0x0000000840310440@78ba71dd rejected from org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor@3db8f0ae[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055)
+java.util.concurrent.RejectedExecutionException: Task org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor$$Lambda$187/0x0000000840310440@78ba71dd rejected from org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor@3db8f0ae[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:825) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1355) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.execute(ExecutorUtil.java:197) ~[?:?]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118) ~[?:?]
+	at org.apache.solr.common.cloud.SolrZkClient$ProcessWatchWithExecutor.process(SolrZkClient.java:875) ~[?:?]
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:535) ~[?:?]
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:510) ~[?:?]
+2020-09-12 18:27:44.104 ERROR (main) [   ] o.a.s.c.SolrCore null:org.apache.solr.common.SolrException: java.util.concurrent.TimeoutException: Could not connect to ZooKeeper localhost:1001 within 30000 ms
+	at org.apache.solr.common.cloud.SolrZkClient.<init>(SolrZkClient.java:203)
+	at org.apache.solr.cloud.ZkController.<init>(ZkController.java:335)
+	at org.apache.solr.core.ZkContainer.initZooKeeper(ZkContainer.java:125)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:701)
+	at org.apache.solr.servlet.SolrDispatchFilter.createCoreContainer(SolrDispatchFilter.java:275)
+	at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:184)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:134)
+	at org.eclipse.jetty.servlet.ServletHandler.lambda$initialize$0(ServletHandler.java:751)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:744)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:360)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1445)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1409)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:825)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:524)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.deploy.bindings.StandardStarter.processBinding(StandardStarter.java:46)
+	at org.eclipse.jetty.deploy.AppLifeCycle.runBindings(AppLifeCycle.java:188)
+	at org.eclipse.jetty.deploy.DeploymentManager.requestAppGoal(DeploymentManager.java:513)
+	at org.eclipse.jetty.deploy.DeploymentManager.addApp(DeploymentManager.java:154)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.fileAdded(ScanningAppProvider.java:173)
+	at org.eclipse.jetty.deploy.providers.WebAppProvider.fileAdded(WebAppProvider.java:447)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider$1.fileAdded(ScanningAppProvider.java:66)
+	at org.eclipse.jetty.util.Scanner.reportAddition(Scanner.java:784)
+	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:753)
+	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:641)
+	at org.eclipse.jetty.util.Scanner.doStart(Scanner.java:540)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.doStart(ScanningAppProvider.java:146)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.deploy.DeploymentManager.startAppProvider(DeploymentManager.java:599)
+	at org.eclipse.jetty.deploy.DeploymentManager.doStart(DeploymentManager.java:249)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+	at org.eclipse.jetty.server.Server.start(Server.java:407)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1924)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1873)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.jetty.start.Main.invokeMain(Main.java:218)
+	at org.eclipse.jetty.start.Main.start(Main.java:491)
+	at org.eclipse.jetty.start.Main.main(Main.java:77)
+Caused by: java.util.concurrent.TimeoutException: Could not connect to ZooKeeper localhost:1001 within 30000 ms
+	at org.apache.solr.common.cloud.ConnectionManager.waitForConnected(ConnectionManager.java:251)
+	at org.apache.solr.common.cloud.SolrZkClient.<init>(SolrZkClient.java:194)
+	... 52 more
+
+2020-09-12 18:27:44.121 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@6f2cb653{/solr,file:///home/ashil/HERIPORT/harvester/solr/server/solr-webapp/webapp/,AVAILABLE}{/home/ashil/HERIPORT/harvester/solr/server/solr-webapp/webapp}
+2020-09-12 18:27:44.122 WARN  (main) [   ] o.e.j.x.XmlConfiguration  => java.security.PrivilegedActionException: java.net.SocketException: Permission denied
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+java.security.PrivilegedActionException: null
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1873) ~[jetty-xml-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.eclipse.jetty.start.Main.invokeMain(Main.java:218) ~[start.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.start.Main.start(Main.java:491) ~[start.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.start.Main.main(Main.java:77) ~[start.jar:9.4.27.v20200227]
+Caused by: java.net.SocketException: Permission denied
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:455) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:447) ~[?:?]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227) ~[?:?]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80) ~[?:?]
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:307) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:231) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:385) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1924) ~[jetty-xml-9.4.27.v20200227.jar:9.4.27.v20200227]
+	... 9 more

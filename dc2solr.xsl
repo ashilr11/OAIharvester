@@ -120,7 +120,7 @@
     </xsl:template>
     <xsl:template name="contributor">
         <xsl:element name="field">
-            <xsl:attribute name="name">dc_contributors</xsl:attribute>
+            <xsl:attribute name="name">dc_contributor</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
         </xsl:element>
     </xsl:template>

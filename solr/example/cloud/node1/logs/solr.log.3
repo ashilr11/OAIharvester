@@ -1,0 +1,125 @@
+2020-09-12 18:33:08.476 INFO  (main) [   ] o.e.j.u.log Logging initialized @760ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-09-12 18:33:08.531 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2020-09-12 18:33:08.621 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.8+10-post-Ubuntu-0ubuntu118.04.1
+2020-09-12 18:33:08.637 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/ashil/HERIPORT/harvester/solr/server/contexts/] at interval 0
+2020-09-12 18:33:08.856 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-09-12 18:33:08.864 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2020-09-12 18:33:08.864 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2020-09-12 18:33:08.866 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2020-09-12 18:33:08.912 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2020-09-12 18:33:08.917 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.0
+2020-09-12 18:33:08.917 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in cloud mode on port 8983
+2020-09-12 18:33:08.917 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/ashil/HERIPORT/harvester/solr
+2020-09-12 18:33:08.917 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-09-12T18:33:08.917746Z
+2020-09-12 18:33:08.944 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr
+2020-09-12 18:33:08.949 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/solr.xml
+2020-09-12 18:33:09.018 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818, but no JMX reporters were configured - adding default JMX reporter.
+2020-09-12 18:33:09.505 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2020-09-12 18:33:09.624 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@778db7c5[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:33:09.624 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@778db7c5[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:33:09.758 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@2cfa2c4f[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:33:09.758 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@2cfa2c4f[provider=null,keyStore=null,trustStore=null]
+2020-09-12 18:33:09.824 INFO  (main) [   ] o.a.s.c.SolrZkServerProps Reading configuration from: /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/zoo.cfg
+2020-09-12 18:33:09.827 INFO  (main) [   ] o.a.s.c.SolrZkServer STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 9983
+2020-09-12 18:33:09.827 WARN  (main) [   ] o.a.s.c.SolrZkServer Embedded Zookeeper is not recommended in production environments. See Reference Guide for details.
+2020-09-12 18:33:10.328 INFO  (main) [   ] o.a.s.c.ZkContainer Zookeeper client=localhost:9983
+2020-09-12 18:33:10.376 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Waiting for client to connect to ZooKeeper
+2020-09-12 18:33:10.449 INFO  (zkConnectionManagerCallback-11-thread-1) [   ] o.a.s.c.c.ConnectionManager zkClient has connected
+2020-09-12 18:33:10.449 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Client is connected to ZooKeeper
+2020-09-12 18:33:10.500 INFO  (main) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (0) -> (1)
+2020-09-12 18:33:10.540 INFO  (main) [   ] o.a.s.c.ZkController Publish node=192.168.0.102:8983_solr as DOWN
+2020-09-12 18:33:10.550 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2020-09-12 18:33:10.550 INFO  (main) [   ] o.a.s.c.ZkController Register node as live in ZooKeeper:/live_nodes/192.168.0.102:8983_solr
+2020-09-12 18:33:10.564 INFO  (zkCallback-10-thread-1) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (1) -> (2)
+2020-09-12 18:33:10.599 INFO  (main) [   ] o.a.s.p.PackageLoader /packages.json updated to version -1
+2020-09-12 18:33:10.610 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2020-09-12 18:33:10.700 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2020-09-12 18:33:10.761 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-09-12 18:33:10.761 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-09-12 18:33:10.765 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-09-12 18:33:10.786 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr
+2020-09-12 18:33:10.787 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [Test_shard1_replica_n1]
+2020-09-12 18:33:10.849 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.0
+2020-09-12 18:33:10.867 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4bff1903{/solr,file:///home/ashil/HERIPORT/harvester/solr/server/solr-webapp/webapp/,AVAILABLE}{/home/ashil/HERIPORT/harvester/solr/server/solr-webapp/webapp}
+2020-09-12 18:33:10.876 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1b73be9f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-09-12 18:33:10.876 INFO  (main) [   ] o.e.j.s.Server Started @3161ms
+2020-09-12 18:33:11.033 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.s.IndexSchema Schema name=default-config
+2020-09-12 18:33:11.640 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-09-12 18:33:12.789 INFO  (qtp638169719-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=23
+2020-09-12 18:33:12.824 INFO  (qtp638169719-17) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json and sendToOCPQueue=true
+2020-09-12 18:33:12.828 INFO  (qtp638169719-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json} status=0 QTime=6
+2020-09-12 18:33:18.559 INFO  (qtp638169719-18) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=list&wt=json and sendToOCPQueue=true
+2020-09-12 18:33:18.560 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=list&wt=json} status=0 QTime=1
+2020-09-12 18:33:25.791 INFO  (zkCallback-10-thread-1) [   ] o.a.s.c.OverseerElectionContext I am going to be the leader 192.168.0.102:8983_solr
+2020-09-12 18:33:25.791 INFO  (zkCallback-10-thread-2) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (2) -> (1)
+2020-09-12 18:33:25.795 INFO  (zkCallback-10-thread-1) [   ] o.a.s.c.Overseer Overseer (id=72057724332408832-192.168.0.102:8983_solr-n_0000000001) starting
+2020-09-12 18:33:25.842 INFO  (OverseerStateUpdate-72057724332408832-192.168.0.102:8983_solr-n_0000000001) [   ] o.a.s.c.Overseer Starting to work on the main queue : 192.168.0.102:8983_solr
+2020-09-12 18:33:26.838 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.0
+2020-09-12 18:33:26.888 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.IndexSchema Schema name=default-config
+2020-09-12 18:33:27.115 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2020-09-12 18:33:27.168 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.CoreContainer Creating SolrCore 'Test_shard1_replica_n1' using configuration from configset Test, trusted=true
+2020-09-12 18:33:27.174 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.Test.shard1.replica_n1' (registry 'solr.core.Test.shard1.replica_n1') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7d9d0818
+2020-09-12 18:33:27.180 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SolrCore [[Test_shard1_replica_n1] ] Opening new SolrCore at [/home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/Test_shard1_replica_n1], dataDir=[/home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/Test_shard1_replica_n1/data/]
+2020-09-12 18:33:27.237 ERROR (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [c:Test s:shard1 r:core_node2 x:Test_shard1_replica_n1] o.a.s.c.SolrCore [Test_shard1_replica_n1] Solr index directory '/home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/Test_shard1_replica_n1/data/index/' is locked (lockType=native).  Throwing exception.
+2020-09-12 18:33:27.237 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.c.SolrCore [Test_shard1_replica_n1]  CLOSING SolrCore org.apache.solr.core.SolrCore@31a4230f
+2020-09-12 18:33:27.237 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.Test.shard1.replica_n1 tag=SolrCore@31a4230f
+2020-09-12 18:33:27.238 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@48ada97d: rootName = null, domain = solr.core.Test.shard1.replica_n1, service url = null, agent id = null] for registry solr.core.Test.shard1.replica_n1/com.codahale.metrics.MetricRegistry@346add87
+2020-09-12 18:33:27.241 INFO  (coreLoadExecutor-19-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.collection.Test.shard1.leader tag=SolrCore@31a4230f
+2020-09-12 18:33:27.245 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:192.168.0.102:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be loaded on startup => org.apache.solr.common.SolrException: Unable to create core [Test_shard1_replica_n1]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1408)
+org.apache.solr.common.SolrException: Unable to create core [Test_shard1_replica_n1]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1408) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:837) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:212) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: org.apache.solr.common.SolrException: Index dir '/home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/Test_shard1_replica_n1/data/index/' of core 'Test_shard1_replica_n1' is already locked. The most likely cause is another Solr server (or another solr core in this server) also configured to use this directory; other possible causes may be specific to lockType: native
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1071) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:906) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1387) ~[?:?]
+	... 7 more
+Caused by: org.apache.lucene.store.LockObtainFailedException: Index dir '/home/ashil/HERIPORT/harvester/solr/example/cloud/node1/solr/Test_shard1_replica_n1/data/index/' of core 'Test_shard1_replica_n1' is already locked. The most likely cause is another Solr server (or another solr core in this server) also configured to use this directory; other possible causes may be specific to lockType: native
+	at org.apache.solr.core.SolrCore.initIndex(SolrCore.java:786) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:988) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:906) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1387) ~[?:?]
+	... 7 more
+2020-09-12 18:33:35.505 INFO  (qtp638169719-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:35.509 INFO  (qtp638169719-87) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1599935615395} status=0 QTime=5
+2020-09-12 18:33:35.510 INFO  (qtp638169719-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1599935615395} status=0 QTime=5
+2020-09-12 18:33:35.544 INFO  (qtp638169719-20) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:35.545 INFO  (qtp638169719-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:35.602 INFO  (qtp638169719-24) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:35.603 INFO  (qtp638169719-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:39.603 INFO  (qtp638169719-87) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:39.603 INFO  (qtp638169719-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1599935615395} status=0 QTime=0
+2020-09-12 18:33:39.606 INFO  (qtp638169719-87) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1599935615395} status=0 QTime=3
+2020-09-12 18:33:39.608 INFO  (qtp638169719-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1599935615395} status=0 QTime=4
+2020-09-12 18:33:39.644 INFO  (qtp638169719-85) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/configs/&detail=false&wt=json&_=1599935619571} status=0 QTime=39
+2020-09-12 18:33:39.667 INFO  (qtp638169719-21) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:39.668 INFO  (qtp638169719-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:39.673 INFO  (qtp638169719-85) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:39.674 INFO  (qtp638169719-85) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:39.693 INFO  (qtp638169719-21) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:39.694 INFO  (qtp638169719-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:41.159 INFO  (qtp638169719-85) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1599935615395} status=0 QTime=0
+2020-09-12 18:33:41.162 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1599935615395} status=0 QTime=4
+2020-09-12 18:33:41.193 INFO  (qtp638169719-24) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:41.193 INFO  (qtp638169719-25) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:41.194 INFO  (qtp638169719-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1599935615395} status=0 QTime=0
+2020-09-12 18:33:41.195 INFO  (qtp638169719-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1599935615395} status=0 QTime=2
+2020-09-12 18:33:41.202 INFO  (qtp638169719-18) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:41.203 INFO  (qtp638169719-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1599935615395} status=0 QTime=1
+2020-09-12 18:33:42.768 INFO  (qtp638169719-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1599935615395} status=0 QTime=0
+2020-09-12 18:33:42.772 INFO  (qtp638169719-85) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1599935615395} status=0 QTime=3
+2020-09-12 18:33:42.803 INFO  (qtp638169719-85) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:42.804 INFO  (qtp638169719-85) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1599935615395} status=0 QTime=0
+2020-09-12 18:33:42.821 INFO  (qtp638169719-21) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1599935615395 and sendToOCPQueue=true
+2020-09-12 18:33:42.822 INFO  (qtp638169719-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1599935615395} status=0 QTime=0
