@@ -1,5 +1,6 @@
 # Ashil Ramjee
-# Python OAI harvester for List Records
+# Python OAI harvester for Get Record
+# See licenses.txt for licenses
 # See ReadMe for installion and running information
 
 import sys
@@ -11,60 +12,23 @@ import xml.dom.pulldom
 import operator
 import codecs
 from optparse import OptionParser
-
-nDataBytes, nRawBytes, nRecoveries, maxRecoveries = 0, 0, 0, 3
-
-def getFile(serverString, command, verbose=1, sleepTime=0):
-    global nRecoveries, nDataBytes, nRawBytes
-    if sleepTime:
-        time.sleep(sleepTime)
-    remoteAddr = serverString + '?verb=%s' % command
-    if verbose:
-        print "\r", "getFile ...'%s'" % remoteAddr[-90:]
-    headers = {'User-Agent': 'OAIHarvester/2.0', 'Accept': 'text/html',
-               'Accept-Encoding': 'compress, deflate'}
-    try:
-        #remoteData=urllib2.urlopen(urllib2.Request(remoteAddr, None, headers)).read()
-        remoteData = urllib2.urlopen(remoteAddr).read()
-    except urllib2.HTTPError, exValue:
-        if exValue.code == 503:
-            retryWait = int(exValue.hdrs.get("Retry-After", "-1"))
-            if retryWait < 0:
-                return None
-            print 'Waiting %d seconds' % retryWait
-            return getFile(serverString, command, 0, retryWait)
-        print exValue
-        if nRecoveries < maxRecoveries:
-            nRecoveries += 1
-            return getFile(serverString, command, 1, 60)
-        return
-    nRawBytes += len(remoteData)
-    try:
-        remoteData = zlib.decompressobj().decompress(remoteData)
-    except:
-        pass
-    nDataBytes += len(remoteData)
-    mo = re.search('<error *code=\"([^"]*)">(.*)</error>', remoteData)
-    if mo:
-        print "OAIERROR: code=%s '%s'" % (mo.group(1), mo.group(2))
-    else:
-        return remoteData
+from httpRequest import getFile
 
 if __name__ == "__main__":
 
+    # Set command line options
     parser = OptionParser()
-
     parser.add_option("-l", "--link", dest="link", help="URL of repository")
     parser.add_option("-o", "--filename", dest="filename", help="write repository to file")
     parser.add_option("-m", "--mdprefix", dest="mdprefix", default="oai_dc", help="use the specified metadata format")
     parser.add_option("-i", "--identifier", dest="identifier", help="specify the identifier")
-
     (options, args) = parser.parse_args()
 
     if options.link is None or options.filename is None:
         parser.print_help()
         parser.error("a repository url and output file are required")
 
+    # Form the verb for the request
     if options:
         serverString = verbOpts = identifier = mdPrefix = ''
         if options.link:
@@ -75,42 +39,32 @@ if __name__ == "__main__":
             identifier = options.identifier
         if options.mdprefix:
             mdPrefix = options.mdprefix
-
     else:
         print usage
 
     if not serverString.startswith('http'):
         serverString = 'http://' + serverString
-
     print "Writing records to %s from archive %s" % (outFileName, serverString)
 
+    # create a file that it writes the XML to
     ofile = codecs.lookup('utf-8')[-1](file(outFileName, 'wb'))
-
     ofile.write('<repository xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" \
      xmlns:dc="http://purl.org/dc/elements/1.1/" \
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\n')  # wrap list of records with this
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\n')
 
     if identifier:
         verbOpts += '&identifier=%s' % identifier
     if mdPrefix:
         verbOpts += '&metadataPrefix=%s' % mdPrefix
-
     print "Using url:%s" % serverString + '?GetRecord' + verbOpts
 
     data = getFile(serverString, 'GetRecord' + verbOpts)
-
     recordCount = 0
-
     events = xml.dom.pulldom.parseString(data)
     for (event, node) in events:
         if event == "START_ELEMENT" and node.tagName == 'record':
             events.expandNode(node)
             node.writexml(ofile)
             recordCount += 1
-
-
     ofile.write('\n</repository>\n'), ofile.close()
-
-    print "\nRead %d bytes (%.2f compression)" % (nDataBytes, float(nDataBytes) / nRawBytes)
-
     print "Wrote out %d records" % recordCount

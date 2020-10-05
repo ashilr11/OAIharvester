@@ -1,0 +1,7 @@
+Test all six verbs with each parameter - Unit Tests
+Test conversion on all repos for list records - Unit
+Test indexing - unit
+Test on different sizes of data. Record times - Performance
+Test on different repositories. - Performance
+Test on our data provider interfaces - Unit 
+Test integration - Black Box integration

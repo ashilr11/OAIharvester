@@ -1,5 +1,5 @@
 # Ashil Ramjee
-# Python script to change OAIXML to Solr Ready XML
+# Python script to change dc XML to Solr XML
 
 import os
 import sys
@@ -11,8 +11,8 @@ import time
 def listdir_fullpath(d):
     return [os.path.join(d, f) for f in os.listdir(d)]
 
+# Uses a Saxon XSLT parser to transfrom the dcXML into solr XML
 def transformFiles(saxonLocation):
-	#transform OAI XML to Solr indexing XML
 	fileList = listdir_fullpath('./dcXML')
 	for file in fileList:
 		outputFile = "." + file.split(".")[1] + "_Solr.xml"
@@ -21,22 +21,14 @@ def transformFiles(saxonLocation):
 			os.system(cs)
 			print file,"processed."
 		except:
-			#this should include a logging event
 			print file,"had errors and did NOT process."
-
-	#move all files to solrXML
 	os.system("mv ./dcXML/*_Solr.xml ./solrXML/")
 
+
 if __name__ == "__main__":
-	#global vars
 	saxonLocation = "saxon-he-10.1.jar"
-
-	#timer
 	startTime = int(time.time())
-
 	transformFiles(saxonLocation)
-
-	#end timer
 	endTime = int(time.time())
 	totalTime = endTime - startTime
 	print "Total seconds elapsed",totalTime

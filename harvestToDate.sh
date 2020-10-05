@@ -13,8 +13,8 @@ echo Metadata converted to solr ready xml.
 
 # Index xml files into solr
 solr/bin/post -c Test2 solrXML/*.xml
-rm solrXML/*
 echo Metadata indexed into solr.
+rm solrXML/*
 
 # Update date file
 > date/date.txt

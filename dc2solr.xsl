@@ -2,7 +2,6 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output omit-xml-declaration="yes"/>
 
-    <!-- To convert things to lowercase: -->
     <xsl:variable name="lcletters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
     <xsl:variable name="ucletters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
 
@@ -12,24 +11,17 @@
         </add>
     </xsl:template>
 
-    <!--removes "responseDate" and "request" elements-->
     <xsl:template match="text()"/>
 
     <xsl:template match="oai_dc:dc" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
         xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-        <!--add doc tag to each-->
         <doc>
-            <!-- sets id of doc as identifier-->
             <xsl:element name="field">
                 <xsl:attribute name="name">id</xsl:attribute>
                 <xsl:value-of select="../../header/identifier"/>
             </xsl:element>
 
-            <!--date field-->
-            <!--<field name="last_modified">NOW</field>-->
-
-            <!--grab all elements and send to templates-->
             <xsl:for-each select="dc:title">
                 <xsl:call-template name="title"/>
             </xsl:for-each>
@@ -80,7 +72,6 @@
 
     </xsl:template>
 
-    <!--Element Templates-->
     <xsl:template name="title">
         <xsl:element name="field">
             <xsl:attribute name="name">dc_title</xsl:attribute>
@@ -88,7 +79,6 @@
         </xsl:element>
     </xsl:template>
     <xsl:template name="creator">
-        <!-- <xsl:variable name="dc_creator"><xsl:value-of select="normalize-space(.)"/></xsl:variable>         -->
         <xsl:element name="field">
             <xsl:attribute name="name">dc_creator</xsl:attribute>
             <xsl:value-of select="normalize-space(.)"/>
